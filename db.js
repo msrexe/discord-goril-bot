@@ -12,4 +12,4 @@ const readFile = () => {
   });
 }
 
-module.exports = {readFile}
+module.exports = readFile
