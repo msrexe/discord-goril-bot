@@ -8,7 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async (msg) => {
-    console.log('message sent!');
+    console.log('message sent! '+msg.content);
   if(msg.content.includes('!goril')){
     var data = await db.readFile();
     data = data.split('\n');
