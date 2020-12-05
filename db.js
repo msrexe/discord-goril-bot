@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+const { resolve } = require('path');
 
 const readFile = () => {
   return new Promise((resolve) => {
@@ -12,4 +13,13 @@ const readFile = () => {
   });
 }
 
-module.exports = {readFile}
+const writeFile = (data) => {
+    fs.appendFile('memes.txt',data,(err)=>{
+      if(err){
+        console.log('dbye ekleme başarısız!!');
+        throw err;
+      }
+    })
+}
+
+module.exports = {readFile,writeFile};
